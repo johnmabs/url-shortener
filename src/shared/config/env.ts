@@ -1,6 +1,12 @@
-export const env = {
-  NODE_ENV: process.env.NODE_ENV ?? "development",
-  PORT: Number(process.env.PORT ?? 3000),
-  DATABASE_URL: process.env.DATABASE_URL,
-  REDIS_URL: process.env.REDIS_URL,
-};
+import { z } from "zod";
+
+const envSchema = z.object({
+  NODE_ENV: z
+    .enum(["development", "test", "production"])
+    .default("development"),
+  PORT: z.coerce.number().int().positive().default(3000),
+  DATABASE_URL: z.url(),
+  REDIS_URL: z.url(),
+});
+
+export const env = envSchema.parse(process.env);
