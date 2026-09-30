@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "John Mabiala",
   "license": "ISC",
   "devEngines": {
     "packageManager": {
@@ -17,5 +17,10 @@
     }
   },
   "packageManager": "pnpm@12.8.1",
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "^26.6.3",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
 }
