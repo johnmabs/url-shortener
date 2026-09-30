@@ -19,7 +19,7 @@ export class ShortLink {
   static create(input: {
     destinationUrl: DestinationUrl;
     shortCode: ShortCode;
-    expiresAt?: Date | null;
+    expiresAt?: Date | null | undefined;
   }): ShortLink {
     const now = new Date();
 
