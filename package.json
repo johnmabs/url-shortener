@@ -7,6 +7,9 @@
     "dev": "tsx watch src/app/server.ts",
     "test": "vitest",
     "test:run": "vitest run",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
     "db:studio": "drizzle-kit studio"
@@ -24,10 +27,15 @@
   "packageManager": "pnpm@12.8.1",
   "type": "module",
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "@types/node": "^26.6.3",
     "drizzle-kit": "^0.31.11",
+    "eslint": "^10.11.0",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.9.9",
     "tsx": "^4.23.15",
     "typescript": "^6.0.3",
+    "typescript-eslint": "^8.71.0",
     "vitest": "^5.0.2"
   },
   "dependencies": {
